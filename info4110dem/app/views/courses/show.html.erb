@@ -1,0 +1,16 @@
+<div data-role="header">
+  <h1><%= @Course.Name %></h1>
+  <%= link_to 'Back', courses_path, { "data-icon"  => "back", "class" => "ui-btn-left" } %> 
+</div>
+
+<div data-role="content" id="map_content">
+
+  <h3><%= @Course.Name %> - <%= @Course.Schedule__c %></h3>
+  <p><%= @Course.Description__c %></p>
+
+  <img src="http://maps.googleapis.com/maps/api/staticmap?center=<%= @Course.Lat__c %>,<%= @Course.Long__c %>&zoom=12&size=400x300&maptype=roadmap
+&markers=color:blue%7Clabel:S%7C<%= @Course.Lat__c %>,<%= @Course.Long__c %>&sensor=true">
+
+<a href="https://maps.google.com/maps?q=<%= @Course.Lat__c %>,<%= @Course.Long__c %>" data-role="button" data-icon="maps"> Open in Google Maps </a>
+
+</div>

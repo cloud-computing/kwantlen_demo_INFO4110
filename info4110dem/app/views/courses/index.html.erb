@@ -1,0 +1,27 @@
+<div data-role="header">
+    <h1>Kwantlen Courses</h1>
+</div>
+
+<%= image_tag "kwantlen-logo.png", :width => "10%", :style => 'display: block; margin-left: auto; margin-right: auto;' %>
+
+<div data-role="content">
+    <ul data-role="listview" data-filter="true">
+    <% @Courses.each do |course| %>
+    <li>
+        <%= link_to course_path(course) do %>
+        <h3><%= course.Name %></h3><p><%= course.Description__c %></p>
+        <% end %>
+    </li>
+    <% end %>
+    </ul>
+</div>
+
+<div data-role="footer">
+    <div data-role="navbar" data-position="fixed" data-iconpos="top">
+        <ul>
+        
+            <li><%= link_to 'Add', new_course_path, "data-icon" => "plus" %></li>
+            <li><a href="#" data-icon="info">About</a></li>
+        </ul>
+    </div>
+</div>

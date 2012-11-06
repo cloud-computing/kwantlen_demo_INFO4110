@@ -1,0 +1,31 @@
+course__c c = new course__c();
+c.Name = 'INFO4110';
+c.Schedule__c = 'MWF4pm-6pm';
+c.Description__c = 'Cloud Computing';
+c.Lat__c = '49.103741';
+c.Long__c = '-122.722481';
+insert c;
+
+c = new course__c();
+c.Name = 'INFO 4250';
+c.Schedule__c = 'MWF5pm-7pm';
+c.Description__c = 'Data Centers';
+c.Lat__c = '49.133479';
+c.Long__c = '-122.872517';
+insert c;
+
+c = new course__c();
+c.Name ='INFO3170';
+c.Schedule__c = 'TueThu2pm-4pm';
+c.Description__c = 'Enterprise Network Security';
+c.Lat__c = '49.132979';
+c.Long__c = '-122.871362';
+insert c;
+
+c = new course__c();
+c.Name = 'INFO2311';
+c.Schedule__c = 'MWF1pm-3pm';
+c.Description__c = 'Networking II';
+c.Lat__c='49.132922';
+c.Long__c='-122.872632';
+insert c;
